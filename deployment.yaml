@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: bobbysdocker/mystaticappimage:v1.0
+        image: bobbysdocker/staticappimage:V1.0
+        
 
         ports:
         - containerPort: 80
