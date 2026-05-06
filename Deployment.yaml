@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: bobbysdocker/myappimage:v1.0
+        image: bobbysdocker/mystaticappimage:v1.0
 
         ports:
         - containerPort: 80
@@ -33,7 +33,7 @@ metadata:
   name: myapp-service
 
 spec:
-  type: NodePort
+  type: LoadBalancer
 
   selector:
     app: myapp
@@ -41,4 +41,3 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30080
